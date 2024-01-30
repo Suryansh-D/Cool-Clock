@@ -1,0 +1,64 @@
+/* Basic clock structure and styling */
+#clock {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #f0f0f0; /* Adjust for desired background */
+    border: 5px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Hands */
+#hour-hand, #minute-hand, #second-hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background-color: #333;
+    transform-origin: 50% 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+#hour-hand {
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+
+#minute-hand {
+    transform: rotate(0deg) translate(-50%, -50%);
+}
+
+#second-hand {
+    transform: rotate(0deg) translate(-50%, -50%);
+    width: 2px;
+    background-color: red;
+}
+
+/* Digital time */
+#digital-time {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #333;
+}
+
+/* Schedule circles */
+#inner-schedule, #outer-schedule {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #ccc;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure schedules are behind hands */
+}
+
+/* Customize spacing and appearance as needed */
